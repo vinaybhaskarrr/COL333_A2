@@ -1,0 +1,18 @@
+Somisetty Harsha Vardhan 2020CS10390
+Varada Vinay Bhaskar 2020CS10405
+
+Part A(ai vs random):
+In this we build a tree using nodes (where 'Node' is a class created for buliding a Tree) and we will write 
+a function expectimax function which gives best possible move based on the averages of the heuristic values 
+of nodes at a depth d, where depth is a given to the function. So now we use this 'expectmax' to build the 
+'get_expectimax_move' function.
+To build this 'get_expectimax_move' function we do some optimisation to the initial c=moves by giving priority 
+to the moves that are in the middle so that it can be best connected. And then heuristic function depends on 
+number of pops remaining for the player. So that when then pops remaing are less he tries to increase his score 
+rather than trying to decrease the score of the opponent.
+
+Part B(ai vs ai):
+Here we have implemented same basic optimisations to the initial moves as we have mensioned above. Here to build 
+'get_intelligent_move' we have used alpha beta pruning and heuristic as optimising difference between the scores 
+of the players. This function is a recursive function which calls itself and update alpha, beta values in each step 
+and if alpha >= beta it prunes the next comming branches
